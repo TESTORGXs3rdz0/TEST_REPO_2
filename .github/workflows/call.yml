@@ -8,6 +8,6 @@ on:
 
 jobs:
   call-external:
-    uses: TESTORGXs3rdz0/TEST_REPO_1/.github/workflows/recwf.yml@main
+    uses: TESTORGXs3rdz0/PRIVATE_REPO/.github/workflows/recwf.yml@main
     with:
       message: 'hello";echo "test'
