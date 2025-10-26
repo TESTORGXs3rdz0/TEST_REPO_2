@@ -1,0 +1,19 @@
+# .github/workflows/caller.yml
+name: Caller Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-receiver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger receiver workflow
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.TARGET_REPO_PAT }}
+          repository: TESTORGXs3rdz0/TEST_REPO_1
+          event-type: trigger-receiver
+          client-payload: '{"message": "Hello from caller repo!"}'
