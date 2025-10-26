@@ -10,4 +10,4 @@ jobs:
   call-external:
     uses: TESTORGXs3rdz0/PRIVATE_REPO/.github/workflows/secretwf.yml@main
     with:
-      message: 'hello";echo "testx'
+      message: 'hello";echo "test'
