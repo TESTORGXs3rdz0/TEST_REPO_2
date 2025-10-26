@@ -1,5 +1,5 @@
 # .github/workflows/caller.yml
-name: Caller Workflows
+name: Caller Workflow
 
 on:
   push:
