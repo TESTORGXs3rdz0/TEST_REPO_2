@@ -1,13 +1,18 @@
-# .github/workflows/caller.yml
-name: Caller Workflow
+name: Reusable Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
 
 jobs:
-  call-external:
-    uses: TESTORGXs3rdz0/TEST_REPO_1/.github/workflows/recwf.yml@main
-    with:
-      message: 'hello";echo "test'
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo input
+        run: echo "Hello ${{ inputs.username }}"
